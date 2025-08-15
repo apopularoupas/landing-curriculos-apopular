@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trabalhe Conosco – A Popular Roupas</title>
+  <style>
+    :root{
+      --red:#E4312B; /* vermelho do anúncio */
+      --black:#111;
+      --gray:#6b7280;
+      --bg:#fff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;}
+    .wrap{max-width:880px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px;padding:12px 0}
+    header .logo-circle{width:64px;height:64px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:32px;border:4px solid #fff;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+    header h1{font-size:clamp(24px,3.6vw,36px);margin:4px 0 0;color:var(--red)}
+    header .badge{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:6px 12px;border-radius:999px;font-size:14px;margin-top:4px}
+
+    .hero{margin:18px 0 12px;padding:18px;border:2px solid var(--black);border-radius:18px;background:#fff;}
+    .hero h2{margin:0 0 8px;font-size:clamp(20px,3.2vw,28px)}
+    .hero p{margin:0;color:var(--gray);font-size:16px}
+
+    .grid{display:grid;grid-template-columns:1fr;gap:16px;margin:18px 0}
+    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+
+    .card{border:1.5px solid #e5e7eb;border-radius:16px;padding:18px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.04)}
+    .card h3{margin:0 0 8px;font-size:20px}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0;list-style:disc;color:var(--red);}
+    li span{color:var(--black)}
+
+    .pill{display:block;width:100%;text-align:center;background:var(--red);color:#fff;font-weight:800;padding:16px;border-radius:14px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+
+    form{display:grid;gap:12px}
+    label{font-weight:600;font-size:14px}
+    input,textarea,select,button{font:inherit}
+    input,textarea,select{width:100%;padding:12px 14px;border:1.5px solid #e5e7eb;border-radius:12px;outline:none;font-size:14px}
+    input:focus,textarea:focus,select:focus{border-color:var(--black);box-shadow:0 0 0 4px rgba(17,17,17,.08)}
+    .row{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:620px){.row{grid-template-columns:1fr 1fr}}
+    .btn-primary{background:var(--red);color:#fff;border:none;padding:14px;border-radius:12px;font-weight:800;cursor:pointer;text-align:center}
+    .btn-primary:hover{background:#c92d24}
+    .btn-secondary{background:var(--black);color:#fff;border:none;padding:14px;border-radius:12px;font-weight:800;cursor:pointer;text-align:center}
+    .btn-secondary:hover{background:#333}
+    .help{font-size:12px;color:var(--gray)}
+    footer{margin:28px 0 8px;color:var(--gray);font-size:13px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo-circle">ap</div>
+      <div>
+        <div class="badge">Estamos contratando</div>
+        <h1>Trabalhe Conosco – Vendedora / Estoquista em Lins‑SP</h1>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h2>Faça parte da A Popular Roupas</h2>
+      <p>Buscamos profissionais comunicativas, prô‑ativas e com experiência em vendas de moda e atendimento ao público. Valorizamos organização no estoque e foco total na cliente.</p>
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Vagas</h3>
+        <span class="pill">Vendedora</span>
+        <span class="pill">Estoquista</span>
+      </div>
+      <div class="card">
+        <h3>Requisitos & Qualificações</h3>
+        <ul>
+          <li><span>Boa comunicação</span></li>
+          <li><span>Pró‑atividade</span></li>
+          <li><span>Experiência em vendas de moda</span></li>
+          <li><span>Maior de idade</span></li>
+          <li><span>Atendimento ao público</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Envie seu currículo</h3>
+      <form action="#" method="POST" enctype="multipart/form-data">
+        <div class="row">
+          <div>
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
+          </div>
+          <div>
+            <label for="email">E‑mail</label>
+            <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input id="telefone" name="telefone" type="tel" placeholder="(14) 9 0000‑0000" required />
+          </div>
+          <div>
+            <label for="cargo">Cargo de interesse</label>
+            <select id="cargo" name="cargo" required>
+              <option value="">Selecione…</option>
+              <option>Vendedora</option>
+              <option>Estoquista</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="linkedin">Perfil profissional (opcional)</label>
+          <input id="linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/seunome" />
+        </div>
+        <div>
+          <label for="mensagem">Apresentação (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte resumidamente sua experiência em lojas de moda"></textarea>
+        </div>
+        <div>
+          <label for="cv">Anexe aqui seu currículo (PDF, DOC, DOCX)</label>
+          <input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx" required />
+          <div class="help">Anexo será enviado para rh.apopularoupas@gmail.com via e‑mail.</div>
+        </div>
+        <button class="btn-primary" type="submit">Enviar Currículo</button>
+      </form>
+      <p class="help">Ou, se preferir, envie pelo WhatsApp com o assunto "Currículo".</p>
+    </div>
+
+    <footer>
+      A Popular Roupas valoriza a excelência no atendimento e a organização de estoque. © 2025 A Popular Roupas – Lins‑SP.
+    </footer>
+  </div>
+</body>
+</html>
